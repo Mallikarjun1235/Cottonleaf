@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="content-main">
+    <div class="content">
+    <center><h2 class="Center wrapper center text">Image classification</h2></center>
+    <div>
+        <section class="section"><form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label button">
+                Choose...
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, ss.jpeg">
+        </form></section>
+    
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <center><button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button></center>
+            </div>
+        </div>
+    
+        <div class="loader" style="display:none;"></div>
+    
+        <h3 class="result-text" id="result">
+            <span> </span>
+        </h3>
+    
+    </div>
+    </div>
+</div>
+{% endblock %}
